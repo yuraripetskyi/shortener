@@ -4,9 +4,9 @@ Algorithm:
 
 Each long URL written into DB and Id (number) of this saved instance will be converted to Base62 to make it look shorter.
 
-Service using PostgreSQL in docker container.
+Service is using PostgreSQL in docker container.
 
-Using already created short URl in case if already exist.
+If a URL has already been shortened by the system, and it is entered a second time, the first shortened URL should be given back to the user.
 
 
 You can start application using docker:
