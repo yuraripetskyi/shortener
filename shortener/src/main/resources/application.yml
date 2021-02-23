@@ -1,0 +1,40 @@
+spring:
+  java:
+    properties:
+      hiibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: shortener
+  jpa:
+    hibernate:
+      ddl-auto: update
+#  datasource:
+##    url: jdbc:mysql://db:3306/shortener
+#    url: jdbc:mysql://localhost:3306/shortener?createDatabaseIfNotExist=true&serverTimezone=UTC
+#    username: root
+##    password: root
+#    password: 1
+  datasource:
+    url: jdbc:postgresql://db:5432/shortener
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: 8080
+application-host: http://localhost
+
+#spring:
+#  java:
+#    properties:
+#      hiibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#  application:
+#    name: data-service
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+
+#server:
+#  port: 8080

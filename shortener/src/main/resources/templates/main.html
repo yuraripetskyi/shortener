@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+           xmlns:th="http://www.thymeleaf.org"
+           xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+           xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Url shortener</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div>
+    <div class="input-form">
+        <form method="POST" th:action="@{/shorten}">
+            <div class="form-group col">
+                <label for="formGroupUrlInput">Enter long URL here</label>
+                <input name="longUrl" type="text" class="form-control" id="formGroupUrlInput" placeholder="Url..." required>
+            </div>
+            <button class="btn btn-primary" type="submit">Make it short!!</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
